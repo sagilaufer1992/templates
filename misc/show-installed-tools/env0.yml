@@ -4,7 +4,8 @@ deploy:
   steps:
     terraformPlan:
       before:
-        - npm upgrade -g npm
+        - wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+        - nvm use 16
         - node --version
         - npm --version
         - yarn --version
