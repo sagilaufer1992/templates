@@ -8,6 +8,8 @@ deploy:
         - | 
             export NVM_DIR="$HOME/.nvm"
             [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+            command -v nvm
+            nvm use 16
         - node --version
         - npm --version
         - yarn --version
