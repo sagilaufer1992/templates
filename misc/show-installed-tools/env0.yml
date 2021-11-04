@@ -4,6 +4,7 @@ deploy:
   steps:
     terraformPlan:
       before:
+        - npm upgrade -g npm
         - node --version
         - npm --version
         - yarn --version
