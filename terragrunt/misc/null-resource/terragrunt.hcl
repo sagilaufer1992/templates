@@ -8,14 +8,18 @@ EOF
 }
 
 terraform {
-  before_hook "before_hook" {
-    commands     = ["apply"]
-    execute      = ["echo", "Applying my terraform"]
+  before_hook "before_hook_1" {
+    commands     = ["init"]
+    execute      = ["terraform", "--version"]
   }
 
-  after_hook "after_hook" {
-    commands     = ["apply"]
-    execute      = ["echo", "Finished applying Terraform successfully!"]
-    run_on_error = false
+  before_hook "before_hook_2" {
+    commands     = ["init"]
+    execute      = ["terraform", "init", "-get=false", "-get-plugins=false"]
+  }
+  
+  before_hook "before_hook_3" {
+    commands     = ["init"]
+    execute      = ["terraform", "output", "-json"]
   }
 }
