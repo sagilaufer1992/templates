@@ -4,6 +4,14 @@ generate "null_resource" {
   contents = <<EOF
 resource "null_resource" "null" {
 }
+  
+terraform {
+  backend "s3" {
+    bucket = "env0-tf-remote-backend-bucket"
+    key = "remote-backend-hooks"
+    region = "us-east-1"
+  }
+}
 EOF
 }
 
