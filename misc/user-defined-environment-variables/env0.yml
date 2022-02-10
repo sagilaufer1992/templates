@@ -1,0 +1,13 @@
+version: 1
+
+deploy:
+  steps:
+    terraformPlan:
+      before:
+        - echo USER_NAME=user >> $ENV0_ENV_VARS
+        - echo USER_EMAIL=user@domain.com >> $ENV0_ENV_VARS
+      after:
+        - echo this is the user name
+        - echo $USER_NAME
+        - echo this is the user email
+        - echo $USER_EMAIL
