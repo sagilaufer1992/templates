@@ -1,2 +1,2 @@
 echo user: $USER_NAME
-echo user umail: $USER_EMAIL
+echo user email: $USER_EMAIL
