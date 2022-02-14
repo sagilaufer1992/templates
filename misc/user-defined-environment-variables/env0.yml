@@ -4,17 +4,8 @@ deploy:
   steps:
     terraformPlan:
       before:
-        - echo $BASH_ENV
-        - whoami
         - echo export USER_NAME=user >> $BASH_ENV
         - echo export USER_EMAIL=user@domain.com >> $BASH_ENV
-        - cat $BASH_ENV
-        - export TEST=test
-        - echo $TEST
       after:
-        - echo $BASH_ENV
         - cat $BASH_ENV
-        - echo this is the user name
-        - echo $USER_NAME
-        - echo this is the user email
-        - echo $USER_EMAIL
+        - ./use-env-variable.sh
