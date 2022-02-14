@@ -9,6 +9,8 @@ deploy:
         - echo export USER_NAME=user >> $BASH_ENV
         - echo export USER_EMAIL=user@domain.com >> $BASH_ENV
         - cat $BASH_ENV
+        - export TEST=test
+        - exho $TEST
       after:
         - echo $BASH_ENV
         - cat $BASH_ENV
