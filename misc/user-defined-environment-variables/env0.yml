@@ -4,9 +4,10 @@ deploy:
   steps:
     terraformPlan:
       before:
-        - echo USER_NAME=user >> .env0-env-vars
-        - echo USER_EMAIL=user@domain.com >> .env0-env-vars
+        - echo USER_NAME=user >> $ENV0_ENV
+        - echo USER_EMAIL=user@domain.com >> $ENV0_ENV
       after:
-        - cat .env0-env-vars
         - echo $USER_NAME
         - echo $USER_EMAIL
+        - ./use-env-variables.sh
+        - cd subdir ; ./use-env-variables.sh
