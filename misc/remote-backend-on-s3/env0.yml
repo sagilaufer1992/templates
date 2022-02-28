@@ -2,4 +2,8 @@ deploy:
   steps:
     terraformInit:
       before:
-        - aws s3api create-bucket --bucket env0-tf-remote-backend-bucket --region us-east-1
+        - ./print-content.sh
+        - aws s3api create-bucket --bucket env0-tf-remote-backend-bucket-sagi-qa --region us-east-1
+    terraforApply:
+      after:
+        - ./print-content.sh
