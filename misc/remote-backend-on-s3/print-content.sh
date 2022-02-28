@@ -2,9 +2,9 @@ echo "current folder"
 pwd
 
 echo "current folder content"
-ls
+ls -la
 
 if [ -d '.terraform' ]; then
   echo "terraform folder content"
-  ls .terraform;
+  ls -la .terraform;
 fi
