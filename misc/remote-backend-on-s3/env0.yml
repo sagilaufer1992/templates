@@ -4,6 +4,6 @@ deploy:
       before:
         - ./print-content.sh
         - aws s3api create-bucket --bucket env0-tf-remote-backend-bucket-sagi-qa --region us-east-1
-    terraforApply:
+    terraformApply:
       after:
         - ./print-content.sh
