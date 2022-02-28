@@ -1,3 +1,5 @@
+pwd
+
 ls
 
 if [ -d '.terraform' ]; then
