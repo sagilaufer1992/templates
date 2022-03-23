@@ -14,6 +14,6 @@ resource "null_resource" "null3" {
 
 resource "null_resource" "null2" {
   triggers = {
-    ids = join(",",[null_resource.null1.id,null_resource.null3.id])
+    ids = join(",",[null_resource.null1.id])
   }
 }
