@@ -10,7 +10,6 @@ deploy:
         - echo "$(sed 's/!!!NAMESPACE!!!/'"sagi-new-ns"'/g' namespace.yaml)" > namespace.yaml;
         - cat namespace.yaml
 
-
 destroy:
   steps:
     setupVariables:
