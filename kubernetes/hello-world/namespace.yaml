@@ -1,14 +1,4 @@
 apiVersion: v1
-kind: Pod
+kind: Namespace
 metadata:
-  name: static-web
-  labels:
-    sagi: laufer
-spec:
-  containers:
-    - name: web
-      image: nginx
-      ports:
-        - name: web
-          containerPort: 80
-          protocol: TCP
+  name: sagi-spacelift
