@@ -11,6 +11,7 @@ deploy:
 destroy:
   steps:
     setupVariables:
-      before:
-        - exit 4
       after: *login-k8s
+    k8sDiff:
+      after:
+        - exit 4
