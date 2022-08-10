@@ -12,3 +12,7 @@ resource "azurerm_resource_group" "group" {
   name     = "env0-${random_string.random.result}-group"
   location = "northeurope"
 }
+
+resource "null_resource" {
+
+}
