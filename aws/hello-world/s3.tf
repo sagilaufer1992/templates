@@ -7,7 +7,7 @@ resource "random_string" "random" {
 }
 
 resource "aws_s3_bucket" "website_bucket" {
-  bucket = "hello-env0-${random_string.random.result}-sagi"
+  bucket = "hello-env0-${random_string.random.result}-sagi2"
   acl    = "public-read"
 
   force_destroy = true
