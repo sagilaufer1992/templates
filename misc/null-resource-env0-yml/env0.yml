@@ -4,9 +4,7 @@ deploy:
   steps:
     terraformInit:
       after:
-        - cat env0.auto.tfvars
-        - echo $HCL
-        - echo YAML=`echo 'yamlencode($HCL)' | terraform console` >> $ENV0_ENV
+        - echo YAML=`echo 'yamlencode(var.HCL)' | terraform console` >> $ENV0_ENV
         - echo $YAML
         - echo "-----"
         - cat $ENV0_ENV
