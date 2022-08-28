@@ -1,0 +1,7 @@
+version: 1
+
+deploy:
+  steps:
+    terraformInit:
+      after:
+        - echo YAML=`echo 'yamlencode($HCL)' | terraform console` >> $ENV0_ENV
