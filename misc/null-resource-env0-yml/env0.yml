@@ -7,5 +7,5 @@ deploy:
         - echo "{" >> a.txt
         - echo "\"a\":\"b\"" >> a.txt
         - echo "}" >> a.txt
-        - echo x="${`cat a.txt | tr -d EOF`}" >> $ENV0_ENV
+        - echo x="`cat a.txt" >> $ENV0_ENV
         - cat $ENV0_ENV
