@@ -3,5 +3,11 @@ version: 1
 deploy:
   steps:
     setupVariables:
+      before:
+        - cat > $ENV0_ENV << EOL
+        - {
+        - "a":"b"
+        - }
+        - EOL
       after:
         - cat $ENV0_ENV
