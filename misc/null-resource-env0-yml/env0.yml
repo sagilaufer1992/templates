@@ -4,10 +4,7 @@ deploy:
   steps:
     setupVariables:
       before:
-        - cat > $ENV0_ENV << EOL
-        - {
-        - "a":"b"
-        - }
-        - EOL
+        - echo "x={ \n \t \"a\":\"b\" \n }" > $ENV0_ENV
+        - cat $ENV0_ENV
       after:
         - cat $ENV0_ENV
