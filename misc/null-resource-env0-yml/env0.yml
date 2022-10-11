@@ -3,8 +3,6 @@ version: 1
 deploy:
   steps:
     setupVariables:
-      before:
-        - echo "x={ \n \t \"a\":\"b\" \n }" > $ENV0_ENV
-        - cat $ENV0_ENV
       after:
+        - echo "x={ \n \t \"a\":\"b\" \n }" > $ENV0_ENV
         - cat $ENV0_ENV
