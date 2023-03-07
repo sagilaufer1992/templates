@@ -1,0 +1,10 @@
+version: 2
+deploy:
+  steps:
+    terraformPlan:
+      before:
+      - name: vault
+        use: https://github.com/sagilaufer1992/env0-vault-plugin
+        inputs:
+          version: 1.11.1
+          directory: .
