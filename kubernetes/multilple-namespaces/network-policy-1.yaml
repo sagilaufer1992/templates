@@ -1,0 +1,22 @@
+# this will block all network egress except to the proxy
+
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: default-deny-egress
+  namespace: $NAMESPACE_1 # change this for the namespace you are working on
+spec:
+  podSelector: {}
+  policyTypes:
+    - Egress
+  egress:
+    - to: # proxy
+        - podSelector:
+            matchLabels:
+              app: pr11314
+          namespaceSelector:
+            matchLabels:
+              app: pr11314
+      ports:
+        - protocol: TCP
+          port: 3128
