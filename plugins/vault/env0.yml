@@ -4,7 +4,7 @@ deploy:
     terraformPlan:
       before:
       - name: vault
-        use: https://github.com/sagilaufer1992/env0-vault-plugin
+        use: https://$PAT@github.com/sagilaufer1992/env0-vault-plugin
         inputs:
           version: 1.11.1
           directory: .
