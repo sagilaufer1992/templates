@@ -1,3 +1,3 @@
 # root folder terraform 
-resource "null_resource" "null-branch-1" {
+resource "null_resource" "null-branch-2" {
 }
