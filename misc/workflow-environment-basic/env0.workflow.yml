@@ -4,4 +4,4 @@ environments:
     templateName: 'null resource'
   rootService2:
     name: nullService2
-    templateName: 'null resource'
+    templateName: 'tg null resource'
