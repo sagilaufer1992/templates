@@ -1,3 +1,3 @@
 # root folder terraform 
-resource "null_resource" "null-base-1" {
+resource "null_resource" "null-base-148" {
 }
