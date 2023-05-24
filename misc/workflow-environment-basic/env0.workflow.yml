@@ -8,7 +8,7 @@ environments:
   rootService4:
     name: nullService4
     templateName: 'null resource'
-    workspaceName: 'taken-ws'
+    workspace: 'taken-ws'
   rootService2:
     name: nullService2
     templateName: 'tg null resource'
