@@ -5,6 +5,10 @@ environments:
   rootService3:
     name: nullService3
     templateName: 'null resource'
+  rootService4:
+    name: nullService4
+    templateName: 'null resource'
+    workspaceName: 'taken-ws'
   rootService2:
     name: nullService2
     templateName: 'tg null resource'
