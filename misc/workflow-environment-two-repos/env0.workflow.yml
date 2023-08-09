@@ -1,0 +1,7 @@
+environments:
+  rootService1:
+    name: GH template
+    templateName: 'tf latest'
+  rootService2:
+    name: ADO template
+    templateName: 'tf - null resource - ADO'
