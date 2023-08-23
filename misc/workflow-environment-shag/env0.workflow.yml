@@ -1,7 +1,7 @@
 environments:
   rootService1:
     name: ghe-env
-    templateName: 'null github enterprise'
+    templateName: 'GHE v3 - .git suffix'
   rootService2:
     name: regular-gh-env
     templateName: 'sagi - tf null resource'
