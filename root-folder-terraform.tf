@@ -1,3 +1,4 @@
-# root folder terraform 
-resource "null_resource" "null" {
+resource "time_sleep" "role_update" {
+  create_duration = "30s"
+
 }
