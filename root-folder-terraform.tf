@@ -41,18 +41,20 @@ output "ws" {
   }
 }
 
-resource "tfe_variable" "sagi_test_import" {
-    workspace_id = data.tfe_workspace.test.id
-    key          = "sagi_secret"
-    category     = "env"
-    sensitive    = true
-    hcl          = false
+resource "tfe_variable" "sagi_test_secret" {
+  category     = "env"
+  description  = "should be laufer_secret_2"
+  hcl          = false
+  key          = "sagi_secret_2"
+  sensitive    = true
+  workspace_id = "ws-FBW3jexDrsf43tmS"
+  value = "laufer_secret_2"
 }
 
 
 output "sagi_test_import" {
   sensitive = true
-  value = {
+  value     = {
     name  = "sagi_test_import"
     value = tfe_variable.sagi_test_import.value
   }
