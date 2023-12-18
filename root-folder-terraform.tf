@@ -15,6 +15,8 @@ terraform {
   }
 }
 
+provider "tfe" {}
+
 # root folder terraform
 resource "null_resource" "null-tfc" {
 }
