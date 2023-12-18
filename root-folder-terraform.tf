@@ -16,7 +16,7 @@ terraform {
 }
 
 # root folder terraform
-resource "null_resource" "null" {
+resource "null_resource" "null-tfc" {
 }
 data "tfe_workspace" "test" {
   name         = "templates-old-tf"
