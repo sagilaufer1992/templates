@@ -2,11 +2,11 @@ generate "null_resource" {
   path = "tg.main.tf"
   if_exists = "overwrite_terragrunt"
   contents = <<EOF
-resource "null_resource" "null1" {
+locals {
+ myMap = {"a" = {name="a"}, "b" = {name="b"}, "c" = {name="c"}}
 }
-resource "null_resource" "null2" {
-}
-resource "null_resource" "null3" {
+resource "null_resource" "null" {
+for_each = local.myMap
 }
 EOF
 }
