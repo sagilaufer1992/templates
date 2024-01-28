@@ -1,6 +1,6 @@
 # root folder terraform 
 resource "null_resource" "null" {
-  count = 2500
+  count = 10000
 }
 
 output "null_output" {
