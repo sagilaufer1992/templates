@@ -1,48 +1,16 @@
   # root folder terraform 
 resource "null_resource" "null" {
-  count = 3000
+}
+
+locals {
+  my_array = [for i in range(100000) : null_resource.null.id]
 }
 
 output "null_output1" {
-  value = null_resource.null[*]
+  value = local.my_array
 }
 
 output "null_output2" {
-  value = null_resource.null[*]
+  value = local.my_array
 }
 
-output "null_output3" {
-  value = null_resource.null[*]
-}
-
-output "null_output4" {
-  value = null_resource.null[*]
-}
-
-output "null_output5" {
-  value = null_resource.null[*]
-}
-
-output "null_output6" {
-  value = null_resource.null[*]
-}
-
-output "null_output7" {
-  value = null_resource.null[*]
-}
-
-output "null_output8" {
-  value = null_resource.null[*]
-}
-
-output "null_output9" {
-  value = null_resource.null[*]
-}
-
-output "null_output10" {
-  value = null_resource.null[*]
-}
-
-output "null_output11" {
-  value = null_resource.null[*]
-}
