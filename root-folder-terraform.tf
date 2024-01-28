@@ -3,6 +3,6 @@ resource "null_resource" "null" {
   count = 2500
 }
 
-output {
+output "null_output" {
   value = null_resource.null[*]
 }
