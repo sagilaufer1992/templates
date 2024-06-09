@@ -1,7 +1,8 @@
-version: 1
-
+version: 2
 deploy:
   steps:
-    opentofuInit:
-      after:
-        - exit 23
+    terraformInit:
+      before:
+        - name: s
+          run: |
+            rm env0.env-vars.json
