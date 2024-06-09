@@ -2,6 +2,6 @@ version: 1
 
 deploy:
   steps:
-    setupVariables:
+    opentofuInit:
       after:
         - exit 23
