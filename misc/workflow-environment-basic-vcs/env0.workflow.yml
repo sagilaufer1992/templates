@@ -1,0 +1,15 @@
+environments:
+  rootService1:
+    name: nullService1
+    vcs:
+      type: 'terraform'
+      repository: 'https://github.com/sagilaufer1992/templates'
+      path: ''
+      githubInstallationId: 26581947
+  rootService2:
+    name: nullService2
+    vcs:
+      type: 'terraform'
+      repository: 'https://github.com/sagilaufer1992/templates'
+      path: ''
+      githubInstallationId: 26581947
