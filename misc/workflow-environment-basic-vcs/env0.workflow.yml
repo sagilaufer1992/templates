@@ -3,6 +3,7 @@ environments:
     name: nullService1
     vcs:
       type: 'terraform'
+      terraformVersion: '1.5.7'
       repository: 'https://github.com/sagilaufer1992/templates'
       path: ''
       githubInstallationId: 26581947
@@ -10,6 +11,7 @@ environments:
     name: nullService2
     vcs:
       type: 'terraform'
+      terraformVersion: '1.5.7'
       repository: 'https://github.com/sagilaufer1992/templates'
       path: ''
       githubInstallationId: 26581947
