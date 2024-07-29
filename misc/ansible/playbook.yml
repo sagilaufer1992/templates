@@ -1,0 +1,7 @@
+---
+- name: Create a local folder
+  hosts: localhost
+  tasks:
+    - name: Print the value of hey
+      debug:
+        msg: "The value of hey is"
