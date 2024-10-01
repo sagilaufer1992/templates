@@ -3,5 +3,5 @@ resource "null_resource" "null" {
 }
 
 output "out1" {
-  value = "output - 2"
+  value = "output - 3"
 }
