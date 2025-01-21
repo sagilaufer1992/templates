@@ -4,5 +4,14 @@ generate "null_resource" {
   contents = <<EOF
 resource "null_resource" "null" {
 }
+
+module "random-uuid" {
+  source = "Invicton-Labs/uuid/random"
+}
+
+output "random-uuid" {
+  value = module.random-uuid.uuid
+}
+
 EOF
 }
